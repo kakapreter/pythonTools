@@ -17,8 +17,8 @@ def makeDirs(parent_directory,folder_prefix,num_folders):
         else:
             os.makedirs(folder_path)
             print(f"文件夹'{folder_name}'已创建在'{folder_path}'")
-    print("批量创建完成！")
-
+            print("批量创建完成！")
+            
 '''
 批量删除文件夹
 parent_directory : 父路径
