@@ -40,5 +40,7 @@ def deleteDirs(parent_directory):
 #批量创建文件夹
 makeDirs('./imgs','img',5)
 
+#删除当前目录的所有文件夹
+#deleteDirs('.')
 #批量删除文件夹
 #deleteDirs('./imgs')
