@@ -1,12 +1,15 @@
 import os
 import shutil
+
 '''
 批量创建文件夹
 parent_directory : 父路径
 folder_prefix : 文件夹前缀
 num_folders : 创建的数量(后缀)
 '''
-def makeDirs(parent_directory,folder_prefix,num_folders):
+
+
+def makeDirs(parent_directory, folder_prefix, num_folders):
     # 使用循环批量创建文件夹
     for i in range(1, num_folders + 1):
         folder_name = f"{folder_prefix}{i}"
@@ -18,11 +21,14 @@ def makeDirs(parent_directory,folder_prefix,num_folders):
             os.makedirs(folder_path)
             print(f"文件夹'{folder_name}'已创建在'{folder_path}'")
             print("批量创建完成！")
-            
+
+
 '''
 批量删除文件夹
 parent_directory : 父路径
 '''
+
+
 def deleteDirs(parent_directory):
     folder_names = [folder_name for folder_name in os.listdir(parent_directory) if
                     os.path.isdir(os.path.join(parent_directory, folder_name))]
@@ -37,10 +43,10 @@ def deleteDirs(parent_directory):
     print("批量删除完成！")
 
 
-#批量创建文件夹
-makeDirs('./imgs','img',5)
+# 批量创建文件夹
+makeDirs('./imgs', 'img', 5000)
 
-#删除当前目录的所有文件夹
-#deleteDirs('.')
-#批量删除文件夹
-#deleteDirs('./imgs')
+# 删除当前目录的所有文件夹
+deleteDirs('.')
+# 批量删除文件夹
+deleteDirs('./imgs')
