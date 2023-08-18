@@ -1,25 +1,58 @@
-def getDataBitInfo(file_path):
+"""
+打印数据2进制信息
+"""
+
+
+def getDataBinaryInfo(file_path):
     with open(file_path, 'rb') as file:
         binary_data = file.read()
     for byte in binary_data:
         print(format(byte, '08b'), end=' ')
+    print("显示完成")
+    print("\n")
+
+
+'''
+打印数据16进制信息
+'''
+
+
+def getDataHexadecimalInfo(file_path):
+    with open(file_path, 'rb') as file:
+        binary_data = file.read()
+    hex_data = ' '.join(format(byte, '02X') for byte in binary_data)
+    print(hex_data)
+    print("显示完成")
+    print("\n")
 
 
 if __name__ == '__main__':
-    print("查看文档二进制信息")
-    file_path = 'D:/Hello.txt'
-    getDataBitInfo(file_path)
+    file_path = 'assets/Hello.txt'
+    '''
+    print("txt二进制信息")
+    getDataBinaryInfo(file_path)
+    '''
+    '''
+    print("txt十六进制信息")
+    getDataHexadecimalInfo(file_path)
+    '''
 
+    file_path2 = 'assets/20210506173254168.png'
     '''
-    print("\n")
-    file_path2 = 'C:/Users/Administrator/Pictures/20210506173254168.png'
-    print("查看图片二进制信息")
-    getDataBitInfo(file_path2)
+    print("png二进制信息")
+    getDataBinaryInfo(file_path2)
+    '''
+    '''
+    print("png十六进制信息")
+    getDataHexadecimalInfo(file_path2)
     '''
 
+    file_path3 = 'assets/1.mp4'
     '''
-    print("\n")
-    file_path3 = 'D:/1.mp4'
-    print("查看mp4二进制信息+")
-    getDataBitInfo(file_path3)
+    print("mp4二进制信息")
+    getDataBinaryInfo(file_path3)
+    '''
+    '''
+    print("mp4十六进制信息")
+    getDataHexadecimalInfo(file_path3)
     '''
