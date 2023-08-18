@@ -43,10 +43,11 @@ def deleteDirs(parent_directory):
     print("批量删除完成！")
 
 
-# 批量创建文件夹
-makeDirs('./imgs', 'img', 5000)
-
-# 删除当前目录的所有文件夹
-deleteDirs('.')
-# 批量删除文件夹
-deleteDirs('./imgs')
+if __name__ == '__main__':
+    # 批量创建文件夹
+    makeDirs('./imgs', 'img', 5000)
+    
+    # 删除当前目录的所有文件夹
+    deleteDirs('.')
+    # 批量删除文件夹
+    deleteDirs('./imgs')
