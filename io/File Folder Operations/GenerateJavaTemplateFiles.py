@@ -11,7 +11,7 @@ def main():
 
     # 指定Java文件的内容模板
     java_content_template = """package com.tedu.test;
-public class Main%03d {
+public class Main%04d {
     public static void main(String[] args) {
         System.out.println("Hello from Main%03d!");
     }
@@ -26,7 +26,7 @@ public class Main%03d {
 
     # 生成文件
     for i in range(start_index, end_index + 1):
-        file_name = os.path.join(output_directory, f"Main{i:03d}.java")
+        file_name = os.path.join(output_directory, f"Main{i:04d}.java")
         java_content = java_content_template % (i, i)
         generate_java_file(file_name, java_content)
 
