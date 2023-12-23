@@ -11,6 +11,7 @@ def main():
 
     # 指定Java文件的内容模板
     java_content_template = """package com.tedu.test;
+    
 public class Main%04d {
     public static void main(String[] args) {
         System.out.println("Hello from Main%03d!");
