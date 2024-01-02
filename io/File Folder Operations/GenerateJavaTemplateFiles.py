@@ -14,7 +14,7 @@ def main():
     
 public class Main%04d {
     public static void main(String[] args) {
-        System.out.println("Hello from Main%03d!");
+        System.out.println("Hello from Main%04d!");
     }
 }
 """
